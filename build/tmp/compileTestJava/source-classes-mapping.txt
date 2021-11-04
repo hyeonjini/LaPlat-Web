@@ -1,0 +1,4 @@
+com/laplat/admin/web/HelloControllerTest.java
+ com.laplat.admin.web.HelloControllerTest
+com/laplat/admin/web/domain/projects/ProjectsRepositoryTest.java
+ com.laplat.admin.web.domain.projects.ProjectsRepositoryTest
