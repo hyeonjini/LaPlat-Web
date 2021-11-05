@@ -1,5 +1,6 @@
 package com.laplat.admin.domain.projects;
 
+import com.laplat.admin.domain.BaseTimeEntity;
 import com.laplat.admin.domain.users.Users;
 import lombok.Builder;
 import lombok.Getter;
@@ -11,7 +12,7 @@ import java.util.List;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Projects {
+public class Projects extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,6 +32,13 @@ public class Projects {
 
     @Builder
     public Projects(String name, String description, String author, Boolean status){
+        this.name = name;
+        this.description = description;
+        this.author = author;
+        this.status = status;
+    }
+
+    public void update(String name, String description, String author, Boolean status){
         this.name = name;
         this.description = description;
         this.author = author;

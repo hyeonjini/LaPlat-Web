@@ -10,6 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
+
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -46,5 +48,27 @@ public class ProjectsRepositoryTest {
         assertThat(projects.getAuthor()).isEqualTo(author);
         assertThat(projects.getStatus()).isEqualTo(status);
 
+    }
+
+    @Test
+    public void registerBaseTimeEntity(){
+        //given
+        LocalDateTime now = LocalDateTime.of(2021, 11, 5, 0, 0, 0);
+        projectsRepository.save(Projects.builder()
+                .name("name")
+                .description("description")
+                .author("author")
+                .status(false)
+                .build());
+
+        //when
+        List<Projects> projectsList = projectsRepository.findAll();
+
+        //then
+        Projects projects = projectsList.get(0);
+
+        System.out.println(">>>>>>>>>>> createDate="+projects.getCreatedDate()+", modifiedDate="+projects.getModifiedDate());
+        assertThat(projects.getCreatedDate()).isAfter(now);
+        assertThat(projects.getModifiedDate()).isAfter(now);
     }
 }
