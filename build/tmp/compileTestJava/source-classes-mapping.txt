@@ -1,6 +1,6 @@
-com/laplat/admin/web/HelloControllerTest.java
- com.laplat.admin.web.HelloControllerTest
 com/laplat/admin/web/domain/projects/ProjectsRepositoryTest.java
  com.laplat.admin.web.domain.projects.ProjectsRepositoryTest
 com/laplat/admin/web/ProjectsApiControllerTest.java
  com.laplat.admin.web.ProjectsApiControllerTest
+com/laplat/admin/web/HelloControllerTest.java
+ com.laplat.admin.web.HelloControllerTest

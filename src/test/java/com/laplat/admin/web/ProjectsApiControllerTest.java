@@ -2,7 +2,6 @@ package com.laplat.admin.web;
 
 import com.laplat.admin.domain.projects.Projects;
 import com.laplat.admin.domain.projects.ProjectsRepository;
-import com.laplat.admin.web.dto.ProjectsResponseDto;
 import com.laplat.admin.web.dto.ProjectsSaveRequestDto;
 import com.laplat.admin.web.dto.ProjectsUpdateRequestDto;
 import org.junit.After;
@@ -42,7 +41,7 @@ public class ProjectsApiControllerTest {
 
     // 생성 Test
     @Test
-    public void saveProjects() throws Exception{
+    public void Projects_생성및조회() throws Exception{
         String name = "name";
         String description = "description";
         String author = "author";
@@ -72,7 +71,7 @@ public class ProjectsApiControllerTest {
     }
     // 수정 Test
     @Test
-    public void updateProjects() throws Exception{
+    public void Projects_생성() throws Exception{
         Projects savedProjects = projectsRepository.save(Projects.builder()
                 .name("name")
                 .description("description")
