@@ -27,6 +27,7 @@ public class Projects extends BaseTimeEntity {
 //    @OneToMany
 //    @JoinColumn(name="user_id")
 //    private List<Users> users;
+//    @ManyToOne
     private String author;
     private Boolean status;
 

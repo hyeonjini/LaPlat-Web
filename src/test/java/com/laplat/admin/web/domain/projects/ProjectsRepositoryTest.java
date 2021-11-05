@@ -27,7 +27,7 @@ public class ProjectsRepositoryTest {
     }
 
     @Test
-    public void saveProjectsAndLoad(){
+    public void Projects_생성및조회(){
         String name = "테스트 이름";
         String description = "테스트 개요";
         String author = "테스트 담당자";
@@ -51,7 +51,7 @@ public class ProjectsRepositoryTest {
     }
 
     @Test
-    public void registerBaseTimeEntity(){
+    public void BaseTimeEntity_등록(){
         //given
         LocalDateTime now = LocalDateTime.of(2021, 11, 5, 0, 0, 0);
         projectsRepository.save(Projects.builder()
@@ -71,4 +71,6 @@ public class ProjectsRepositoryTest {
         assertThat(projects.getCreatedDate()).isAfter(now);
         assertThat(projects.getModifiedDate()).isAfter(now);
     }
+
+    //삭제 Test
 }
