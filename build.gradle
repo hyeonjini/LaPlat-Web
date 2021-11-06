@@ -30,6 +30,7 @@ dependencies {
     testAnnotationProcessor('org.projectlombok:lombok')
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     implementation('com.h2database:h2')
+    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
 
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     // JUnit5에서 4스타일 사용

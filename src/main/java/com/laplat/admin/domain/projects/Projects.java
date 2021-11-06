@@ -1,13 +1,11 @@
 package com.laplat.admin.domain.projects;
 
 import com.laplat.admin.domain.BaseTimeEntity;
-import com.laplat.admin.domain.users.Users;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Getter
 @NoArgsConstructor
